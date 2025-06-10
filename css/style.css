@@ -1,174 +1,94 @@
-/* === Global Reset & Fonts === */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
+  margin: 0;
   font-family: 'Montserrat', sans-serif;
-  background: linear-gradient(135deg, #f2f2f2, #e0e0e0);
-  color: #333;
-  scroll-behavior: smooth;
+  background: linear-gradient(135deg, #ff3399, #00cfff);
+  color: #fff;
+  overflow-x: hidden;
 }
 
-/* === Header === */
-header {
-  background: linear-gradient(120deg, #e60073, #ff3399);
-  padding: 20px 40px;
-  color: white;
-  text-align: center;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-}
-
-nav {
+.hero {
+  height: 100vh;
   display: flex;
+  align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin-top: 10px;
+  position: relative;
+  text-align: center;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 40px;
+  border-radius: 20px;
+  backdrop-filter: blur(8px);
+  width: 90%;
+  max-width: 700px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  animation: fadeIn 2s ease;
+}
+
+.profile-img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 4px solid white;
+  box-shadow: 0 0 15px #fff;
+}
+
+.typing-text {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.typing-text span {
+  color: #ffe600;
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
 }
 
 nav a {
+  display: inline-block;
+  margin: 0 15px;
+  padding: 12px 20px;
+  border: 2px solid #fff;
+  border-radius: 30px;
   color: white;
   text-decoration: none;
-  font-weight: 600;
-  position: relative;
-  transition: all 0.3s ease-in-out;
+  font-weight: bold;
+  transition: all 0.3s ease;
 }
 
-nav a::after {
-  content: "";
-  width: 0%;
-  height: 2px;
-  background-color: white;
-  position: absolute;
-  left: 0;
-  bottom: -4px;
-  transition: 0.4s;
-}
-
-nav a:hover::after {
-  width: 100%;
-}
-
-/* === Hero Section === */
-.hero {
-  padding: 50px 20px;
-  text-align: center;
-  background: url('../assets/images/bg-blur.jpg') center/cover no-repeat;
-  color: white;
-  backdrop-filter: blur(10px);
-}
-
-.hero img {
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 5px solid white;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-  margin-bottom: 20px;
-}
-
-.hero h2 {
-  font-size: 2rem;
-}
-
-.hero p {
-  font-size: 1.1rem;
-  margin-top: 10px;
-}
-
-/* === Sections === */
-.section {
-  max-width: 1000px;
-  margin: 40px auto;
-  padding: 40px;
+nav a:hover {
   background: white;
-  border-radius: 16px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  color: #000;
 }
 
-.section:hover {
-  transform: scale(1.01);
-}
-
-.section h1, .section h2 {
-  margin-bottom: 20px;
-  color: #e60073;
-}
-
-/* === Cards === */
-.card {
-  padding: 20px;
-  border-radius: 12px;
-  margin-bottom: 30px;
-  background: rgba(255, 255, 255, 0.8);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+.social-links a {
+  color: white;
+  margin: 0 10px;
+  font-size: 1.5rem;
   transition: transform 0.3s;
 }
 
-.card:hover {
-  transform: translateY(-5px);
-  background: #f9f9f9;
+.social-links a:hover {
+  transform: scale(1.2);
 }
 
-/* === Contact Form === */
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-.contact-form input,
-.contact-form textarea {
-  padding: 15px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 1rem;
-  transition: 0.3s;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-  border-color: #e60073;
-  outline: none;
-  box-shadow: 0 0 5px rgba(230, 0, 115, 0.4);
-}
-
-.contact-form button {
-  padding: 15px;
-  border: none;
-  border-radius: 8px;
-  background: #e60073;
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.contact-form button:hover {
-  background: #cc0066;
-}
-
-/* === Responsive === */
+/* Mobile */
 @media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .hero img {
-    width: 150px;
-    height: 150px;
-  }
-
-  .section {
-    margin: 20px;
-    padding: 20px;
+  .typing-text {
+    font-size: 1.5rem;
   }
 }
