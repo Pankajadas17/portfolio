@@ -1,69 +1,174 @@
-body {
-  font-family: 'Segoe UI', sans-serif;
+/* === Global Reset & Fonts === */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+* {
   margin: 0;
   padding: 0;
-  background: #f8f9fa;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(135deg, #f2f2f2, #e0e0e0);
   color: #333;
+  scroll-behavior: smooth;
 }
 
-header, nav, section {
-  padding: 20px;
+/* === Header === */
+header {
+  background: linear-gradient(120deg, #e60073, #ff3399);
+  padding: 20px 40px;
+  color: white;
   text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
-nav ul {
-  list-style: none;
+nav {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 20px;
+  margin-top: 10px;
 }
 
 nav a {
+  color: white;
   text-decoration: none;
-  color: #e60073;
-  font-weight: bold;
+  font-weight: 600;
+  position: relative;
+  transition: all 0.3s ease-in-out;
 }
 
+nav a::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  transition: 0.4s;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* === Hero Section === */
 .hero {
-  padding: 40px 20px;
+  padding: 50px 20px;
+  text-align: center;
+  background: url('../assets/images/bg-blur.jpg') center/cover no-repeat;
+  color: white;
+  backdrop-filter: blur(10px);
 }
 
 .hero img {
   width: 200px;
+  height: 200px;
+  object-fit: cover;
   border-radius: 50%;
-  margin: 20px;
+  border: 5px solid white;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
 }
 
+.hero h2 {
+  font-size: 2rem;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-top: 10px;
+}
+
+/* === Sections === */
 .section {
-  max-width: 800px;
-  margin: auto;
-  padding: 40px 20px;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 0 10px #ccc;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 40px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
+.section:hover {
+  transform: scale(1.01);
+}
+
+.section h1, .section h2 {
+  margin-bottom: 20px;
+  color: #e60073;
+}
+
+/* === Cards === */
 .card {
-  margin-bottom: 30px;
   padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  background: #fff;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s;
 }
 
-.contact-form input, .contact-form textarea {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #bbb;
-  border-radius: 5px;
+.card:hover {
+  transform: translateY(-5px);
+  background: #f9f9f9;
+}
+
+/* === Contact Form === */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #e60073;
+  outline: none;
+  box-shadow: 0 0 5px rgba(230, 0, 115, 0.4);
 }
 
 .contact-form button {
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
   background: #e60073;
   color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
+  font-weight: bold;
   cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contact-form button:hover {
+  background: #cc0066;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .section {
+    margin: 20px;
+    padding: 20px;
+  }
 }
