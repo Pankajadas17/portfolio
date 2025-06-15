@@ -302,8 +302,8 @@ nav a:hover {
 /* Main Projects Section */
 .projects-section {
   padding: 60px 20px;
-  background: #f9f9f9;
-  color: #333;
+  background: #545353;
+  color: #787676;
 }
 
 /* Container */
@@ -311,19 +311,20 @@ nav a:hover {
   max-width: 1000px;
   margin: 0 auto;
   text-align: center;
+  background : rgb(54, 53, 53);
 }
 
 /* Headings */
 .projects-title {
   font-size: 2.8rem;
-  color: #222;
+  color: #dad6d6;
   margin-bottom: 10px;
 }
 
 .projects-subtitle {
   font-size: 1.2rem;
   margin-bottom: 40px;
-  color: #555;
+  color: #dad6d6;
 }
 
 .projects-subtitle a {
