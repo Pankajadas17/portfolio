@@ -1,19 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact | Pankaja HY</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <section class="section">
-    <h1>Contact Me</h1>
-    <form action="contact.php" method="POST" class="contact-form">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
+  <section class="section contact-section">
+    <div class="container">
+      <h1 class="contact-title fade-in" style="animation-delay: 0.2s;">Let's Work Together</h1>
+      <p class="contact-subtitle fade-in" style="animation-delay: 0.4s;">
+        Interested in collaborating or hiring me for your next project? I'm currently open to freelance opportunities, internships, and full-time roles in data science, AI, and web development.
+        <br><br>
+        Fill out the form below or reach out directly—I'd love to hear from you.
+      </p>
+
+      <form action="contact.php" method="POST" class="contact-form">
+        <input type="text" id="name" name="name" class="fade-in" style="animation-delay: 0.6s;" placeholder="Your Full Name" required />
+
+        <input type="email" id="email" name="email" class="fade-in" style="animation-delay: 0.8s;" placeholder="Your Email Address" required />
+
+        <textarea id="message" name="message" class="fade-in" style="animation-delay: 1s;" placeholder="Tell me about your project or opportunity..." rows="6" required></textarea>
+
+        <button type="submit" class="submit-btn fade-in" style="animation-delay: 1.2s;">Send Inquiry</button>
+      </form>
+    </div>
   </section>
 </body>
 </html>
+.
