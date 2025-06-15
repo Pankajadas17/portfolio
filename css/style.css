@@ -3,7 +3,7 @@
 body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
-  background: linear-gradient(135deg, #1d0210, #e6eef0);
+  background: linear-gradient(135deg, #eeeeee, #000a0d);
   color: #fff;
   overflow-x: hidden;
 }
@@ -67,7 +67,7 @@ nav a {
 
 nav a:hover {
   background: white;
-  color: #000;
+  color: #020000;
 }
 
 .social-links a {
@@ -96,16 +96,16 @@ nav a:hover {
 /* === Certifications Page Styles === */
 .cert-page-section {
   padding: 60px 20px;
-  background-color: #fff;
+  background-color: rgb(20, 0, 0);
   text-align: center;
-  color: #020000;
+  color: white;
 }
 
 .cert-page-title {
   font-size: 2.5rem;
   margin-bottom: 40px;
   font-weight: bold;
-  color: white!important;
+  color: rgb(248, 247, 247);
 }
 
 .cert-page-grid {
