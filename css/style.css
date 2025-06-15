@@ -98,13 +98,14 @@ nav a:hover {
   padding: 60px 20px;
   background-color: #fff;
   text-align: center;
-  color: #111;
+  color: #020000;
 }
 
 .cert-page-title {
   font-size: 2.5rem;
   margin-bottom: 40px;
   font-weight: bold;
+  color: white!important;
 }
 
 .cert-page-grid {
